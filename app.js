@@ -81,5 +81,5 @@ let sayac = document.querySelector(".sayac");
 
 function countClick() {
   count = count + 1;
-  sayac.innerHTML = `(${count})`;
+  sayac.innerHTML = `[ ${count} ]`;
 }
