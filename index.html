@@ -12,34 +12,35 @@
     />
   </head>
   <body>
-    <div class="pt-8 px-8">
-      <div class="container rounded-md">
-        <header class="header flex justify-around items-center pt-6">
-          <p class="font-bold"><a href="#">E Commorce</a></p>
+    <div class="container">
+      <header class="header flex justify-around items-center pt-6">
+        <p class="font-bold"><a href="#">E Commorce</a></p>
+        <input
+          class="inpSearch"
+          type="search"
+          id="search-dropdown"
+          class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+          placeholder="Search input"
+          required
+        />
+        <div class="">
+          <i class="fa-solid fa-plus text-white"></i>
           <input
-            class="inpSearch"
-            type="search"
-            id="search-dropdown"
-            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-            placeholder="Search input"
-            required
+            class="urunEkleBtn text-white"
+            type="submit"
+            id="btn"
+            value="Ürün Ekle"
           />
-          <div class="">
-            <i class="fa-solid fa-plus text-white"></i>
-            <input
-              class="urunEkleBtn text-white"
-              type="submit"
-              id="btn"
-              value="Ürün Ekle"
-            />
-          </div>
-        </header>
-      </div>
-
+        </div>
+      </header>
+    </div>
+    <div class="pt-8 px-8">
       <p class="font-bold text-xl pt-4">Ürün Listesi</p>
 
       <div class="w-full urunlerGelecekDiv"></div>
+    </div>
 
+    <div class="pt-2 px-2">
       <div class="hidden" id="formKapsayici">
         <div class="flex justify-between w-full pb-6 pt-6">
           <div class="pDiv"><p class="font-bold">Ürün Ekle</p></div>
@@ -52,9 +53,9 @@
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <!-- <div class="flex w-full pb-6">
-                  <div class="pDiv"><p class="font-bold">Ürün Ekle</p></div>
-                  <div class="carpiBtn"><a href="#">X</a></div>
-                </div> -->
+                    <div class="pDiv"><p class="font-bold">Ürün Ekle</p></div>
+                    <div class="carpiBtn"><a href="#">X</a></div>
+                  </div> -->
                 <input
                   class="urunAdi appearance-none block w-full bg-gray-200 text-gray-700 border border-gary-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
