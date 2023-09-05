@@ -59,7 +59,7 @@ let listItems = (productName, price, description) => {
   urunAciklamaG.className = "pAciklamaTag";
   aTag.setAttribute("href", "#");
   aTag.className = "aTag";
-  aTag.textContent = "Ürünü Düzenle";
+  aTag.textContent = "ÜRÜNÜ DÜZENLE";
   kapsayiciDiv.className = "kapsayiciDiv";
 
   kapsayiciDiv.appendChild(urunAdiG);
@@ -97,8 +97,6 @@ function urunleriYerlestir(e) {
   urunAdi.value = "";
   urunFiyati.value = "";
   urunAciklama.value = "";
-  // urun.map((item) => {
-  //   listItems(item.productName, item.price, item.description);
-  // });
+
   e.preventDefault();
 }
