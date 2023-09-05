@@ -35,7 +35,9 @@
       </header>
     </div>
     <div class="pt-8 px-8">
-      <p class="font-bold text-xl pt-4 pb-4">Ürün Listesi</p>
+      <p class="font-bold text-xl pt-4 pb-4">
+        Ürün Listesi <span class="sayac">(0)</span>
+      </p>
 
       <div class="w-full urunlerGelecekDiv"></div>
     </div>
@@ -84,6 +86,7 @@
                 ></textarea>
 
                 <button
+                  onclick="countClick()"
                   class="urunOlusturBtn text-white w-full btn py-2 px-4 rounded bg-blue-600"
                 >
                   ÜRÜNÜ OLUŞTUR

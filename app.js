@@ -73,6 +73,13 @@ function urunleriYerlestir(e) {
   urun.map((item) => {
     listItems(item.productName, item.price, item.description);
   });
-
   e.preventDefault();
+}
+
+let count = 0;
+let sayac = document.querySelector(".sayac");
+
+function countClick() {
+  count = count + 1;
+  sayac.innerHTML = `(${count})`;
 }
