@@ -70,6 +70,14 @@ let listItems = (productName, price, description) => {
   urunlerGelecekDiv.appendChild(kapsayiciDiv);
 };
 
+let count = 0;
+let sayac = document.querySelector(".sayac");
+
+function countClick() {
+  count = count + 1;
+  sayac.innerHTML = `[ ${count} ]`;
+}
+
 function urunleriYerlestir(e) {
   if (urunAdi.value == "") {
     // alert("LÜTFEN ÜRÜN ADI GİRİNİZ");
@@ -90,12 +98,4 @@ function urunleriYerlestir(e) {
   //   listItems(item.productName, item.price, item.description);
   // });
   e.preventDefault();
-}
-
-let count = 0;
-let sayac = document.querySelector(".sayac");
-
-function countClick() {
-  count = count + 1;
-  sayac.innerHTML = `[ ${count} ]`;
 }
