@@ -91,12 +91,12 @@ function urunleriYerlestir(e) {
   } else {
     urun.map((item) => {
       listItems(item.productName, item.price, item.description);
-      countClick();
-      urunAdi.value = "";
-      urunFiyati.value = "";
-      urunAciklama.value = "";
     });
   }
+  countClick();
+  urunAdi.value = "";
+  urunFiyati.value = "";
+  urunAciklama.value = "";
   // urun.map((item) => {
   //   listItems(item.productName, item.price, item.description);
   // });
