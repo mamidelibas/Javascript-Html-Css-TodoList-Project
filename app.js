@@ -56,6 +56,7 @@ let listItems = (productName, price, description) => {
   urunAdiG.textContent = productName;
   urunFiyatiG.textContent = price + " ₺";
   urunAciklamaG.textContent = description;
+  urunAciklamaG.className = "pAciklamaTag";
   aTag.setAttribute("href", "#");
   aTag.className = "aTag";
   aTag.textContent = "Ürünü Düzenle";
@@ -70,9 +71,24 @@ let listItems = (productName, price, description) => {
 };
 
 function urunleriYerlestir(e) {
-  urun.map((item) => {
-    listItems(item.productName, item.price, item.description);
-  });
+  if (urunAdi.value == "") {
+    // alert("LÜTFEN ÜRÜN ADI GİRİNİZ");
+    return;
+  } else if (urunFiyati.value == "") {
+    // alert("LÜTFEN ÜRÜN FİYATI GİRİNİZ");
+    return;
+  } else if (urunAciklama.value == "") {
+    // alert("LÜTFEN ÜRÜN AÇIKLAMASI GİRİNİZ");
+    return;
+  } else {
+    urun.map((item) => {
+      listItems(item.productName, item.price, item.description);
+      countClick();
+    });
+  }
+  // urun.map((item) => {
+  //   listItems(item.productName, item.price, item.description);
+  // });
   e.preventDefault();
 }
 
