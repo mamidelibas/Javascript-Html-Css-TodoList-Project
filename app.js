@@ -14,6 +14,9 @@ let urunAdiGelecek = document.querySelector(".urunAdiGelecek");
 let urunFiyatiGelecek = document.querySelector(".urunFiyatiGelecek");
 let urunAciklamasiGelecek = document.querySelector(".urunAciklamasiGelecek");
 
+urunEkleBtn.addEventListener("click", pencereAc);
+carpiBtn.addEventListener("click", pencereKapat);
+
 function pencereAc() {
   formKapsayici.classList.replace("hidden", "block");
 }
@@ -29,9 +32,6 @@ let urunler = [
   },
 ];
 let urun = [];
-
-urunEkleBtn.addEventListener("click", pencereAc);
-carpiBtn.addEventListener("click", pencereKapat);
 
 urunAdi.addEventListener("keyup", (e) => {
   urunler.productName = urunAdi.value;
