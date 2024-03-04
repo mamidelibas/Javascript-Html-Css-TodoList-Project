@@ -12,14 +12,39 @@ body {
   padding-left: 130px;
   padding-right: 130px;
 }
+.cours {
+  cursor: pointer;
+}
+.urunEkleBtn {
+  cursor: pointer;
+}
 .inpSearch {
   width: 700px;
   height: 40px;
   padding: 10px;
+  outline: none;
 }
 .aTag {
-  color: blue;
-  padding-top: 15px;
+  padding: 0 10px 0 10px;
+  color: white;
+  margin-top: 15px;
+  border: 1px solid #2b5cfb;
+  background-color: #2b5cfb !important;
+  border-radius: 10px;
+}
+.aSil {
+  padding: 0 10px 0 10px;
+  color: white;
+  margin-left: 15px;
+  border: 1px solid black;
+  background-color: black !important;
+  border-radius: 10px;
+}
+.temizleBtn {
+  background-color: rgb(120, 0, 0);
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
 }
 .urunlerGelecekDiv {
   display: flex;

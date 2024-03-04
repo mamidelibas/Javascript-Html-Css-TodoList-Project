@@ -46,26 +46,33 @@ urun.push(urunler);
 
 urunOlusturBtn.addEventListener("click", urunleriYerlestir);
 
+let urunListBtn = document.querySelector(".urunListBtn");
+
 let listItems = (productName, price, description) => {
-  let kapsayiciDiv = document.createElement("div");
+  let kapsayiciDiv = document.createElement("form");
   let urunAdiG = document.createElement("h1");
   let urunFiyatiG = document.createElement("p");
   let urunAciklamaG = document.createElement("p");
-  let aTag = document.createElement("a");
+  let aTag = document.createElement("button");
+  let aSil = document.createElement("button");
 
   urunAdiG.textContent = productName;
   urunFiyatiG.textContent = price + " ₺";
   urunAciklamaG.textContent = description;
   urunAciklamaG.className = "pAciklamaTag";
-  aTag.setAttribute("href", "#");
   aTag.className = "aTag";
   aTag.textContent = "ÜRÜNÜ DÜZENLE";
+  aSil.className = "aSil";
+  aSil.textContent = "SİL";
+  aSil.setAttribute("onClick", "satirSil(this)");
+
   kapsayiciDiv.className = "kapsayiciDiv";
 
   kapsayiciDiv.appendChild(urunAdiG);
   kapsayiciDiv.appendChild(urunFiyatiG);
   kapsayiciDiv.appendChild(urunAciklamaG);
   kapsayiciDiv.appendChild(aTag);
+  kapsayiciDiv.appendChild(aSil);
 
   urunlerGelecekDiv.appendChild(kapsayiciDiv);
 };
@@ -73,8 +80,9 @@ let listItems = (productName, price, description) => {
 let count = 0;
 let sayac = document.querySelector(".sayac");
 
-function countClick() {
-  count = count + 1;
+function satirSil(e) {
+  e.closest("form").remove();
+  count -= 1;
   sayac.innerHTML = `[ ${count} ]`;
 }
 
@@ -93,7 +101,8 @@ function urunleriYerlestir(e) {
       listItems(item.productName, item.price, item.description);
     });
   }
-  countClick();
+  count += 1;
+  sayac.innerHTML = `[ ${count} ]`;
   urunAdi.value = "";
   urunFiyati.value = "";
   urunAciklama.value = "";

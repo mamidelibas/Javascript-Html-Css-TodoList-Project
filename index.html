@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ÖDEV - 3</title>
+    <title>JAVASCRİPT TODO PROJECT</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -14,16 +14,16 @@
   <body>
     <div class="container1">
       <header class="header flex justify-around items-center pt-6">
-        <p class="font-bold"><a href="#">E-Commorce</a></p>
+        <p class="font-bold"><a href="#">E-Tic</a></p>
         <input
           class="inpSearch"
           type="search"
           id="search-dropdown"
-          class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-          placeholder="Search input"
+          class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+          placeholder="Search "
           required
         />
-        <div class="">
+        <div class="cours">
           <i class="fa-solid fa-circle-plus text-white"></i>
           <input
             class="urunEkleBtn text-white"
@@ -34,7 +34,7 @@
         </div>
       </header>
     </div>
-    <div class="pt-8 px-24">
+    <div class="pt-8 px-24 urunListBtn">
       <p class="font-bold text-xl pt-4 pb-4">
         Ürün Listesi <span class="sayac">[ 0 ]</span>
       </p>
@@ -53,12 +53,8 @@
           <form class="w-full">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <!-- <div class="flex w-full pb-6">
-                    <div class="pDiv"><p class="font-bold">Ürün Ekle</p></div>
-                    <div class="carpiBtn"><a href="#">X</a></div>
-                  </div> -->
                 <input
-                  class="urunAdi appearance-none block w-full text-gray-700 border border-gary-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  class="urunAdi appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-first-name"
                   type="text"
                   placeholder="Ürün Adı"
